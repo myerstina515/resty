@@ -1,0 +1,42 @@
+*{
+    background-color: rgb(202, 219, 241);
+}
+
+#textReturn {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    height: 200px;
+    width: 500px;
+    border: 2px solid rgb(2, 2, 146);
+    p{
+        font-size: 20px;
+        
+        b{
+            margin-right: 20px;
+        }
+    }
+}
+
+#radioButtons{
+    margin: 20px auto 20px auto;
+    text-align: center;
+    button{
+        margin: 0 10px 0 10px;
+    }
+}
+
+#url{
+    margin: 0 auto 0 auto;
+    text-align: center;
+    button{
+        margin-left: 10px;
+    }
+    input{
+        margin-left: 10px;
+        background-color: rgb(253, 242, 242);
+    }
+}
+button{
+    background-color: rgb(209, 207, 207);
+}
