@@ -3,6 +3,8 @@
 
 ## Day 1/Lab 26
 
+## Day 2/Lab 27
+
 ### Author: Tina Myers
 
 ### Setup
@@ -19,7 +21,8 @@
 
 ### UML
 
-![UML](../UML-lab26.png)
+> Day 1: ![UML](../UML-lab26.png)
+> Day 2: ![UML](../resty2.png)
 
 ==================================================================
 

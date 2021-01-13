@@ -1,33 +1,36 @@
 import React from 'react';
-import Header from './header';
-import Footer from './footer';
-import Form from './form';
+import Header from './header/header';
+import Footer from './footer/footer';
+import Form from './form/form';
+import Results from './results/results';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // words: '',
-      // url: ''
-    }
+      headers: [],
+      count: 0,
+      results: []
+      }
   }
-  // handleWords = e => {
-  //   let newWords = e.target.value;
-  //   this.setState({ words: newWords });
-  // }
-  // handleClick = e => {
-  //   e.preventDefault();
-  //   let newWords = this.state.words;
-  //   this.setState({ url: newWords });
-  //   console.log(Form.state);
-  // }
-  
+  newResults = (apiResults) => {
+    this.setState({ headers: apiResults.headers });
+    this.setState({ results: apiResults });
+    this.setState({ count: apiResults.length });
+  }
 
   render(){
     return (
       <>
-        <Header />
-        <Form />
+        <Header/>
+        <Form 
+          // url={'https://swapi.co/api/people'}
+          apiResults={this.newResults}
+        />
+        <Results
+          count={this.state.count}
+          results={this.state.results}
+        />
         <Footer />
       </>
     )
