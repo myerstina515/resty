@@ -4,6 +4,7 @@ import ReactJson from 'react-json-view';
 class Results extends React.Component {
   render(){
     console.log('props from the results page', this.props)
+    console.log('count', this.props.count);
     return (
       <>
         <p>Count: <span>{this.props.count}</span></p>

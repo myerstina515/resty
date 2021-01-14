@@ -14,11 +14,19 @@ class Form extends React.Component{
 			e.preventDefault();
 			let url = e.target.url.value;
 			this.setState({ url });
-			if(this.state.method){this.setState({ display: true })}
-			const starPeople = await fetch(url, {method: this.state.method, mode: 'cors' })
+			try{
+			var starPeople = await fetch(url, {method: this.state.method, mode: 'cors' })
 			console.log('this is star people', starPeople);
-			const data = await starPeople.json();
+			} catch(err){
+				console.error(err)
+			}
+			try{
+			let data = await starPeople.json();
 			this.props.apiResults(data);
+			} catch(err) {
+				console.error(err);
+			}
+			if(this.state.method){this.setState({ display: true })}
 		}
 		handleDivClick = e => {
 			e.preventDefault();

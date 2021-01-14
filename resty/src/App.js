@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      headers: [],
+      headers: {},
       count: 0,
       results: []
       }
@@ -16,7 +16,7 @@ class App extends React.Component {
   newResults = (apiResults) => {
     this.setState({ headers: apiResults.headers });
     this.setState({ results: apiResults });
-    this.setState({ count: apiResults.length });
+    this.setState({ count: apiResults.count });
   }
 
   render(){
